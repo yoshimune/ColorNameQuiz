@@ -14,7 +14,7 @@
 ## 🚀 動作デモ
 
 Github Pagesで公開されているデモページはこちらです。
-[デモページを開く](https://あなたのユーザー名.github.io/リポジトリ名/)
+[デモページを開く](https://yoshimune.github.io/ColorNameQuiz/)
 
 ## 💻 ローカルでの実行方法
 
