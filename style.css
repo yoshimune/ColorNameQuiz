@@ -1,0 +1,185 @@
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* centerから変更(長い表に対応するため) */
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 40px; /* 上に余白 */
+    padding-bottom: 40px;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px; /* 少し幅を広げる */
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.progress-label {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.label {
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: bold;
+}
+
+.question-text {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.secondary-btn {
+    background-color: #6c757d;
+}
+
+.secondary-btn:hover {
+    background-color: #5a6268;
+}
+
+.restart-btn {
+    background-color: #28a745;
+}
+.restart-btn:hover {
+    background-color: #218838;
+}
+
+.hidden {
+    display: none;
+}
+
+/* バッジ */
+.badge {
+    background-color: #dc3545;
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/* 結果詳細 */
+.color-preview {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    border: 3px solid #eee;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.result-details p {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid #eee;
+    padding: 8px 0;
+    margin: 0;
+}
+
+.result-details p strong {
+    min-width: 100px;
+    color: #555;
+}
+
+.result-details p span {
+    text-align: right;
+    flex: 1;
+}
+
+.correct-mark { color: #28a745; font-weight: bold; margin-left: 10px; }
+.incorrect-mark { color: #dc3545; font-weight: bold; margin-left: 10px; }
+.correct { color: #28a745; }
+.incorrect { color: #dc3545; }
+
+/* 総合結果テーブル */
+.table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.status-ok { color: #28a745; font-weight: bold; text-align: center; }
+.status-ng { color: #dc3545; font-weight: bold; text-align: center; }

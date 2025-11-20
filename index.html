@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>色名クイズ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>色名クイズ</h1>
+            <div class="header-controls">
+                <p>解説を読んで、色の名前と系統色名を答えてください。</p>
+                <button id="show-summary-btn" onclick="showSummary()" class="secondary-btn">成績・結果を見る</button>
+            </div>
+        </header>
+
+        <div id="quiz-area" class="card">
+            <div class="quiz-header">
+                <span class="label">解説</span>
+                <span id="progress-label" class="progress-label">残り: - 問</span>
+            </div>
+            <p id="question-text" class="question-text">読み込み中...</p>
+
+            <div class="input-group">
+                <label for="input-name">色名 <span class="badge">必須</span></label>
+                <input type="text" id="input-name" placeholder="例: 桜色、ときいろ">
+            </div>
+
+            <div class="input-group">
+                <label for="input-system">系統色名 <span class="badge">必須</span></label>
+                <input type="text" id="input-system" placeholder="例: 明るい紫みの赤">
+            </div>
+
+            <button id="submit-btn" onclick="checkAnswer()">回答する</button>
+        </div>
+
+        <div id="result-area" class="card hidden">
+            <h2 id="result-title">結果</h2>
+            
+            <div class="color-preview" id="color-preview"></div>
+            
+            <div class="result-details">
+                <p><strong>色名:</strong> <span id="res-name"></span></p>
+                <p><strong>系統色名:</strong> <span id="res-system"></span></p>
+                <p><strong>マンセル値:</strong> <span id="res-munsell"></span></p>
+                <p><strong>RGB:</strong> <span id="res-rgb"></span></p>
+                <p><strong>解説:</strong> <span id="res-desc"></span></p>
+            </div>
+
+            <button id="next-btn" onclick="nextQuestion()">次の問題へ</button>
+        </div>
+
+        <div id="summary-area" class="card hidden">
+            <h2>総合結果</h2>
+            <p id="summary-score">正解数: 0 / 0</p>
+            
+            <div class="table-wrapper">
+                <table id="summary-table">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>問題(正解)</th>
+                            <th>あなたの回答</th>
+                            <th>判定</th>
+                        </tr>
+                    </thead>
+                    <tbody id="summary-body">
+                        </tbody>
+                </table>
+            </div>
+
+            <button onclick="restartQuiz()" class="restart-btn">最初からやり直す</button>
+            <button onclick="returnToQuiz()" id="return-btn" class="secondary-btn">クイズに戻る</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
