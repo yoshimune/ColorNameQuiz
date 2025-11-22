@@ -10,6 +10,22 @@
     <div class="container">
         <header>
             <h1>色名クイズ</h1>
+            
+            <div class="dataset-selector">
+                <label for="dataset-select">出題範囲を選択:</label>
+                <select id="dataset-select" onchange="changeDataset()">
+                    <option value="colordata.json">全部入り (All)</option>
+                    <option value="colordata_vv.json">あざやかな (Vivid)</option>
+                    <option value="colordata_lt.json">明るい (Light)</option>
+                    <option value="colordata_st.json">つよい (Strong)</option>
+                    <option value="colordata_dp.json">こい (Deep)</option>
+                    <option value="colordata_pl.json">うすい (Pale)</option>
+                    <option value="colordata_sf.json">やわらかい (Soft)</option>
+                    <option value="colordata_dl.json">くすんだ (Dull)</option>
+                    <option value="colordata_dk.json">暗い (Dark)</option>
+                    <option value="colordata_mg.json">灰みの (Grayish)</option>
+                </select>
+            </div>
             <div class="header-controls">
                 <p>解説を読んで、色の名前と系統色名を答えてください。</p>
                 <button id="show-summary-btn" onclick="showSummary()" class="secondary-btn">成績・結果を見る</button>

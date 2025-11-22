@@ -183,3 +183,41 @@ tr:nth-child(even) {
 
 .status-ok { color: #28a745; font-weight: bold; text-align: center; }
 .status-ng { color: #dc3545; font-weight: bold; text-align: center; }
+
+.dataset-selector {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.dataset-selector label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.dataset-selector select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* スマホ等でセレクトボックスが押しやすいように調整 */
+@media (min-width: 600px) {
+    .dataset-selector {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    .dataset-selector label {
+        margin-bottom: 0;
+        white-space: nowrap;
+    }
+}
